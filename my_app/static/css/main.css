@@ -1,0 +1,454 @@
+
+/*======== import google font =======*/
+
+/*============ start variable ==========*/
+:root {
+    --main-color: #ff0000;
+}
+/*============ end variable =============*/
+
+/*===========start global rules=============*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+.clearfix {
+    clear: both;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*====small====*/
+@media (min-width:768px) {
+    .container {
+        width: 720px;
+    }
+}
+/*====meduim====*/
+@media (min-width:992px) {
+    .container {
+        width: 920px;
+    }
+}
+/*===larg===*/
+@media (min-width:1200px) {
+    .container {
+        width: 1150px;
+    }
+}
+/*===========end global rules====================*/
+
+/*=========== start nav bar ====================*/
+.nav-bar {
+    background-color:#000;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-family: 'Barlow', sans-serif;
+}
+.nav-bar .logo {
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Barlow', sans-serif;
+}
+.nav-bar .logo span {
+    color: var(--main-color);
+}
+.nav-bar .nav-links {
+    float: right;
+}
+.nav-bar ul li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 18px;
+}
+.nav-bar ul li a {
+    color: #fff;
+    transition: 0.4s;
+}
+.nav-bar ul li a:hover {
+    color: var(--main-color);
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+.nav-bar .fa-solid, .nav-bar .fa {
+    display: none;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .nav-bar .nav-links {
+        position: fixed;
+        background-color: var(--main-color);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -202px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .nav-bar ul {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+    .nav-bar ul li {
+        display: block;
+        margin-left: 0px;
+        margin-bottom: 15px;
+        margin-right: 50px;
+        transition: 0.5s;
+    }
+    .nav-bar ul li:hover {
+        padding-left: 20px;
+        transition: 0.5s;
+    }
+    .nav-bar ul li a:hover {
+        color: #fff;
+    }
+    .nav-bar .fa-solid {
+        display: block;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        float: right;
+    }
+    .nav-bar .fa {
+        color: #fff;
+        float: right;
+        padding: 10px 20px;
+        font-size: 25px;
+        display: block;
+    }
+}
+/*=========== end nav bar ====================*/
+
+/*=========== start header ====================*/
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+.header .content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.header .content h1 {
+    font-size: 55px;
+}
+.header .content p {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 30px;
+
+}
+@keyframes animation-color {
+    from {color: var(--main-color);}
+    to {color: #fff;}
+}
+.header .content i {
+    color: #fff;
+    margin-top: 70px;
+    transition: 0.5s;
+    animation-name:  animation-color;
+    animation-duration: 2.5s;
+    transform: rotate(180deg);
+}
+.header .content i:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+@media (max-width:768px) {
+    .header .content h1 {
+        font-size: 35px;
+    }
+    .header .content p {
+        font-size: 22px;
+    }
+}
+/*=========== end header ====================*/
+
+/*=========== start about ====================*/
+.about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #d5d5d5;
+}
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .container .content{
+    width: 40%;
+}
+.about .container .content h1 { 
+    color: var(--main-color);
+}
+.about .container .content p {
+    line-height: 1.6;
+}
+.about .container .content .cv {
+    float: right;
+    margin-right: 10%;
+    margin-top: 20px;
+    color: rgb(81, 58, 29);
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+.about .container .content .cv:hover {
+    color: var(--main-color);
+    transition: 0.4s;
+    text-decoration: underline;
+}
+.about .container .image {
+    width: 40%;
+}
+.about .container .img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+    transition: 0.3s;
+}
+.about .container .img:hover {
+    box-shadow: 0 0 15px #000;
+    transition: 0.3s;
+}
+@media  (max-width:768px) {
+    .about .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about .container .content{
+        margin-right: 0;
+        width: 90%;
+    }
+    .about .container .content p{ 
+        margin-bottom: 30px;
+        line-height: 1.6;
+        font-size: 19px;
+    }
+    .about .container .content .cv{
+        float: none;
+        margin-right: 0;
+    }
+    .about .container .image {
+        width: 85%;
+        margin-top: 40px;
+        order: -1;
+    }
+}
+/*=========== end about =====================*/
+
+/*=========== start skills =====================*/
+.skills {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #444;
+}
+.skills .container > h1 {
+    font-size: 28px;
+}
+.skills .container > p {
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.skills .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .row .feat:not(:last-of-type) {
+    margin-right: 30px;
+}
+.skills .row .feat {
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    transition: 0.3s;
+}
+.skills .row .feat:hover{
+    box-shadow: 0 0 10px #808080;
+    transition: 0.3s;
+}
+.skills .row .feat h3 {
+    margin-bottom: 8px;
+}
+@media (max-width:767px) {
+    .skills .container > p {
+        font-size: 15px;
+    }
+    .skills .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills .row .feat:not(:last-of-type) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .skills .row .feat h3 {
+        font-size: 20px;
+    }
+    .skills .row .feat p {
+        font-size: 18px;
+    }
+}
+/*=========== end skills =====================*/
+
+/*=========== start contact =====================*/
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #d5d5d5;
+}
+.contact .container > h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.contact .content .personel-info {
+    flex-basis: 280px;
+}
+.contact .content .personel-info div {
+    margin-bottom: 10%;
+}
+.contact .content .personel-info div i {
+    float: left;
+    width: 15%;
+    margin-top: 12px;
+    color: #f44336;
+}
+.contact .content .personel-info div h4 {
+    font-weight: normal;
+}
+.contact .content .personel-info div p {
+    margin-left: 15%;
+    padding: 6px 0;
+    color: #555;
+    font-size: 13px;
+}
+.contact form {
+    width: 50%;
+}
+.contact form input {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: none;
+}
+.contact form textarea {
+    padding: 10px 12px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px
+}
+.contact input:focus, textarea:focus {
+    outline: none;
+}
+.contact form .btn {
+    width: 40%;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 0 0 20px 0;
+    transition: 0.3s;
+}
+.contact form .btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+@media (max-width:768px) {
+    .contact .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .content .personel-info {
+        width: 80%;
+    }
+    .contact form {
+        width: 90%;
+        align-self: center;
+    }
+    .contact form .btn {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+/*=========== start contact =====================*/
+
+/*=========== start footer =====================*/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0 9px;
+}
+footer .container .first-p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+footer .container .fab {
+    margin-right: 13px;
+    margin-left: 13px;
+    color: var(--main-color);
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+footer .container .far {
+    color: var(--main-color);
+}
+footer .container p {
+    font-size: 14px;
+}
+footer .container p a {
+    color: #dadada;
+    text-decoration: underline;
+}
+footer .container p a span {
+    color: var(--main-color);
+}
+
+/*=========== end footer =====================*/
