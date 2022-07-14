@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark.com</title>
+    <!--===== render all elements normally =====-->
+    <link rel="stylesheet" href="static/css/normalise.css"/>
+    <!--===== main template css file =====-->
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <!--===== Font Awesome 5 =====-->
+    <script src="https://kit.fontawesome.com/bee8b69cbe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--start navigation bar-->
+    <nav class="nav-bar">
+        <div class="container">
+            <a href="#home" class="logo">Mark <span>K</span></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+    <!--start navigation bar-->
+    
+    <!--start header-->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome!</h1>
+                <p>I'm Mark,</p>
+                <p>Back-end Developer.</p>
+                <a href="#about" title="scroll down"><i class="fa-solid fa-circle-arrow-up fa-2x"></i></a>
+            </div>
+        </div>
+    </header>
+    <!--end header-->
+
+    <!--start about-->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="content">
+                <h1>About.</h1>
+                <p>My name is Mark Kiguli and I am currently studying Automatique<br>
+                This academic year, 2021-2022, I completed my third-year Licence.<br>
+                Outside of education, I take a keen interest in technology and programming.</p>
+                <a class="cv" href="static/cv/mark_cv.pdf" download>Download CV</a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="image">
+                <img src="static/images/mark.jpg" class="img" alt="mark">
+            </div>
+        </div>
+    </section>
+    <!--start about-->
+
+    <!--start skills-->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h1>My Skills</h1>
+            <p>I'm Backend developer well versed with Python, C++.<br>
+            I'm well conversant with modern frameworks such as Flask</p>
+            <div class="row">
+                <div class="feat">
+                    <h3>Python</h3>
+                    <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.</p>
+                </div>
+                <div class="feat">
+                    <h3>C++</h3>
+                    <p>C++ is a very popular language, It’s used in industries including software and game development, VR, robotics.</p>
+                </div>
+                <div class="feat">
+                    <h3>Flask</h3>
+                    <p>Flask is a Python web framework that makes it easy to create a fully-featured web application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end skills-->
+    
+    <!--start contact-->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <div class="content">
+                <div class="personel-info">
+                    <div>
+                        <i class="fas fa-home"></i>
+                        <h4>Boumerdes</h4>
+                        <p>Algeria</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>+213 (0)553642151</h4>
+                        <p>Sunday to Thursday 8 Am to 6 Pm</p>
+                    </div>
+                    <div>
+                        <i class="far fa-envelope"></i>
+                        <h4>markkiguli10@gmail.com</h4>
+                        <p>Email us your query</p>
+                    </div>
+                </div>
+                <form>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="text" name="email" placeholder="Enter email adress" required>
+                    <input type="text" name="subject" placeholder="Enter your subject">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <input class="btn" type="submit" name="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--end contact-->
+
+    <!--start footer-->
+    <footer>
+        <div class="container">
+            <p class="first-p">Hight level experience in Backend and development knowledge, producing quality Work.</p>
+            <a href="https://twitter.com/blaisegucci?t=xeQhmYwP_GzOIna7aQOAlg&s=09" target="_blank"><i class="fab fa-twitter fa-sm"></i></a>
+            <a href="https://www.instagram.com/mark.blaisz/?hl=fr" target="_blank"><i class="fab fa-instagram fa-sm"></i></a>
+            <a href="https://www.linkedin.com/in/kiguli-mark-51175a15a" target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>
+            <p>made with <i class="far fa-heart fa-sm"></i> by <a href="https://nadjibm.herokuapp.com/" target="_blank">Nadjib <span>M</span></a></p>
+        </div>
+    </footer>
+    <!--end footer-->
+
+    <!--main js file-->
+    <script src="static/js/main.js"></script>
+</body>
+</html>
